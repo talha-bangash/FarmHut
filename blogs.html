@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<style>
+    .navbar-nav{
+    justify-content: end;
+    padding-left: 240px;
+}
+.navbar-toggler:focus,.navbar-toggler:active,.navbar-toggler{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+    #checkbox {
+display: none;
+}
+
+.toggle {
+position: relative;
+width: 35px;
+height: 35px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 4px;
+transition-duration: .5s;
+border-radius: 50%;
+}
+
+.bars {
+width: 50%;
+height: 3px;
+background-color: rgb(11, 8, 14);
+border-radius: 20px;
+}
+.toggle:hover .bars,.toggle:focus .bars{
+background-color: rgb(50, 157, 33);
+}
+.toggle:hover,.toggle:focus,.toggle:active{
+background-color: rgba(194, 192, 192, 0.331);
+}
+#bar2 {
+transition-duration: .8s;
+}
+
+#bar1,#bar3 {
+width: 40%;
+border-radius: 20px;
+}
+#checkbox:checked .bars{
+background-color: rgb(50, 157, 33);
+
+}
+#checkbox:checked + .toggle .bars {
+position: absolute;
+transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+transform: scaleX(0);
+transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+width: 50%;
+transform: rotate(45deg);
+transition-duration: .5s;
+background-color: rgb(50, 157, 33);
+}
+
+#checkbox:checked + .toggle #bar3 {
+width: 50%;
+transform: rotate(-45deg);
+transition-duration: .5s;
+background-color: rgb(50, 157, 33);
+
+}
+
+#checkbox:checked + .toggle {
+transition-duration: .5s;
+transform: rotate(180deg);
+}
+li{
+padding-inline: 20px;
+}
+nav li:hover{
+background-color: rgba(225, 225, 225, 0.381);
+border-radius: 10px;
+color: rgb(121, 192, 73);
+}
+
+.nav-item:hover .nav-link{
+color: rgb(121, 192, 73);
+}
+</style>
+<body>
+                <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="images/logo.webp" height="40px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="features.html">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="prices.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="faq.html" >FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold"  href="blogs.html">Blogs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+      <section class="testimonial">
+        <h1>Join a Growing<br>
+            Team of <span class="green">Happy Users</span></h1>
+            <p>See what our customers are saying about us.</p>
+        <div class="row justify-content-center">
+            <div class="columnn col-lg-3 col-md-5 col-sm-10">
+                <div class="caard">
+                    <h5>Effective Market Reach</h5>
+                <p>
+                    "Farmhut helped me access markets and connect with people vital for enhancing my farming. It's a great platform for marketing produce and increasing market value."</p>
+                </div>
+                <div class="caard">
+                    <h5>Farmer-Centric Approach</h5>
+                    <p>"Farmhut's focus on farmers' needs is remarkable. It has relieved me of market worries, allowing me to concentrate on growing my products."</p>
+                </div>                
+                <div class="caard">
+                    <h5>Market Expansion</h5>
+                    <p>"Since joining Farmhut, I've seen a significant increase in my market reach. The platform has been instrumental in getting orders and expanding my business."</p>
+                </div> 
+            </div>
+            <div class="columnn col-lg-4 col-md-5 col-sm-10">
+                <div class="caard">
+                    <h5>Tech-Driven Farming Solutions</h5>
+                    <p>"Farmhut is an innovative platform that has helped me reach a wide range of customers, enhancing the sale of my produce. It's a great platform for marketing and increasing market value."</p>
+                </div>
+                <div class="caard">
+                    <h5>Efficient and Reliable</h5>
+                    <p>"Farmhut's innovative approach has streamlined my agricultural processes, making them more efficient and reliable. The platform's features are perfectly tailored for modern farmers."</p>
+                </div>
+               
+                <div class="caard">
+                    <h5>Comprehensive Agricultural Support
+                    </h5>
+                    <p>"The level of support and resources available through Farmhut is outstanding. It's an all-encompassing platform for anyone in the agricultural sector looking for growth and efficiency."</p>
+                </div>
+            </div>
+            <div class="columnn col-lg-3 col-md-5 col-sm-10">
+                <div class="caard">
+                    <h5>Revolutionizing Farming</h5>
+                    <p>"Farmhut Africa has truly revolutionized the way I manage my farming business. The access to market information and diagnostics tools has been a game-changer."</p>
+                </div>
+                <div class="caard">
+                    <h5>Exceptional Market Access</h5>
+                    <p>"With Farmhut, I've gained exceptional access to broader markets and vital farming information. It's an indispensable tool for any serious farmer."
+                    </p>
+                </div>
+                <div class="caard">
+                    <h5>Revolutionizing Farming</h5>
+                    <p>"Farmhut has brought innovative tools to my farming practice, enhancing efficiency and productivity. Their technology is a true asset in modern agriculture."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
